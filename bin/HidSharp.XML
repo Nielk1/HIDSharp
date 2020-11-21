@@ -158,10 +158,20 @@
             <exclude />
         </member>
         <member name="P:HidSharp.HidStream.ReadTimeout">
-            <inheritdoc />
+            <summary>
+            The maximum amount of time, in milliseconds, to wait for to receive a HID report.
+            
+            The default is 3000 milliseconds.
+            To disable the timeout, set this to <see cref="F:System.Threading.Timeout.Infinite"/>.
+            </summary>
         </member>
         <member name="P:HidSharp.HidStream.WriteTimeout">
-            <inheritdoc />
+            <summary>
+            The maximum amount of time, in milliseconds, to wait for the device to acknowledge a HID report.
+            
+            The default is 3000 milliseconds.
+            To disable the timeout, set this to <see cref="F:System.Threading.Timeout.Infinite"/>.
+            </summary>
         </member>
         <member name="T:HidSharp.ReportDescriptors.Units.MassUnit">
             <summary>
@@ -233,6 +243,17 @@
             </summary>
             <param name="stream">The stream to use to communicate with the device.</param>
             <returns>True if the connetion was successful.</returns>
+        </member>
+        <member name="M:HidSharp.HidDevice.ToString">
+            <inheritdoc />
+        </member>
+        <member name="P:HidSharp.HidDevice.DevicePath">
+            <summary>
+            The operating system's name for the device.
+            
+            If you have multiple devices with the same Vendor ID, Product ID, Serial Number. etc.,
+            this may be useful for differentiating them.
+            </summary>
         </member>
         <member name="P:HidSharp.HidDevice.MaxInputReportLength">
             <summary>
