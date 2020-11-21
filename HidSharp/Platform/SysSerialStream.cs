@@ -74,7 +74,7 @@ namespace HidSharp.Platform
 
         static Exception ExceptionForClosed()
         {
-            return new ObjectDisposedException("Closed.", (Exception)null);
+            return CommonException.CreateClosedException();
         }
 
         internal abstract void HandleFree();

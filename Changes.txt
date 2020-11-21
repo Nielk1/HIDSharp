@@ -1,3 +1,9 @@
+2.1.0 (May 4, 2019):
+  Added experimental Bluetooth Low Energy support on Windows. This part of the library may change in the future. Let me know how it works for you.
+  Fixed a race condition in the exclusivity layer.
+  Fixed a threading bug that cropped up on .NET Core on Linux.
+  Serial devices that use Windows's buggy usbser.sys driver are now compatible with HIDSharp, including the detection of connection and disconnection.
+  
 2.0.8 (January 21, 2019):
   Added support in SerialStream for seven data bits and even/odd parity.
   Fixed a bug on MacOS which caused HID devices without serial numbers to not show up.

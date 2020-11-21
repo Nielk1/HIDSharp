@@ -455,6 +455,17 @@
             Gets or sets the raw HID value describing the units.
             </summary>
         </member>
+        <member name="T:HidSharp.Experimental.BleDevice">
+            <summary>
+            Represents a Bluetooth Low Energy device.
+            </summary>
+        </member>
+        <member name="M:HidSharp.Experimental.BleDevice.Open">
+            <inheritdoc/>
+        </member>
+        <member name="M:HidSharp.Experimental.BleDevice.Open(HidSharp.OpenConfiguration)">
+            <inheritdoc/>
+        </member>
         <member name="T:HidSharp.Reports.Units.LuminousIntensityUnit">
             <summary>
             Defines the possible units of luminous intensity.
@@ -798,6 +809,11 @@
             The device is running on Linux.
             </summary>
         </member>
+        <member name="P:HidSharp.ImplementationDetail.BleDevice">
+            <summary>
+            The device is a Bluetooth Low Energy device.
+            </summary>
+        </member>
         <member name="P:HidSharp.ImplementationDetail.HidDevice">
             <summary>
             The device is a HID device.
@@ -868,6 +884,12 @@
             Initializes a new instance of the <see cref="T:HidSharp.DeviceList"/> class.
             </summary>
         </member>
+        <member name="M:HidSharp.DeviceList.GetBleDevices">
+            <summary>
+            Gets a list of all connected BLE devices.
+            </summary>
+            <returns>The device list.</returns>
+        </member>
         <member name="M:HidSharp.DeviceList.GetHidDevices">
             <summary>
             Gets a list of all connected HID devices.
@@ -892,7 +914,7 @@
         </member>
         <member name="M:HidSharp.DeviceList.GetAllDevices">
             <summary>
-            Gets a list of all connected HID and serial devices.
+            Gets a list of all connected HID, BLE, and serial devices.
             </summary>
             <returns>The device list.</returns>
         </member>
@@ -1071,6 +1093,19 @@
         <member name="T:HidSharp.Reports.Usage">
             <summary>
             See http://www.usb.org/developers/hidpage for additional HID Usage Tables.
+            </summary>
+        </member>
+        <member name="M:HidSharp.Experimental.BleStream.#ctor(HidSharp.Experimental.BleDevice,HidSharp.Experimental.BleService)">
+            <exclude/>
+        </member>
+        <member name="P:HidSharp.Experimental.BleStream.Device">
+            <summary>
+            Gets the <see cref="T:HidSharp.Experimental.BleDevice"/> associated with this stream.
+            </summary>
+        </member>
+        <member name="P:HidSharp.Experimental.BleStream.Service">
+            <summary>
+            Gets the <see cref="T:HidSharp.Experimental.BleService"/> associated with this stream.
             </summary>
         </member>
         <member name="T:HidSharp.Utility.BcdHelper">
